@@ -2,7 +2,8 @@ PATH
   remote: .
   specs:
     my-feedback-form (0.0.1)
-      rails (~> 3.2.12)
+      jquery-rails
+      rails (~> 3.2.11)
 
 GEM
   remote: http://rubygems.org/
