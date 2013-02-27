@@ -27,7 +27,3 @@ rake db:migrate
 
 rake setup_feedback_type
 ```
-
-# License
-
-This project rocks and uses MIT-LICENSE.
