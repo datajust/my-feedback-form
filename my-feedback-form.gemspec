@@ -7,11 +7,11 @@ require "my-feedback-form/version"
 Gem::Specification.new do |s|
   s.name        = "my-feedback-form"
   s.version     = MyFeedbackForm::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of MyFeedbackForm."
-  s.description = "TODO: Description of MyFeedbackForm."
+  s.authors     = ["Guilherme Gonçalves"]
+  s.email       = ["guilherme@webgoal.com.br"]
+  s.homepage    = "https://github.com/guigonc/my-feedback-form"
+  s.summary     = "Rails gem to provide feedback form for Rails 3 apps."
+  s.description = "Rails gem to provide feedback form for Rails 3 apps."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
