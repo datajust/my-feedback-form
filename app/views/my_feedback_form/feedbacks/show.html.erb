@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @feedback.user_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @feedback.type %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @feedback.title %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @feedback.message %>
+</p>
+
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>
