@@ -1,11 +1,10 @@
-require_dependency "my_feedback_form/application_controller"
 
 module MyFeedbackForm
   class FeedbacksController < ApplicationController
     # GET /feedbacks/new
     # GET /feedbacks/new.json
     def new
-      @feedback = Feedback.new
+      @feedback = MyFeedbackForm::Feedback.new
   
       respond_to do |format|
         format.html # new.html.erb
@@ -16,11 +15,15 @@ module MyFeedbackForm
     # POST /feedbacks
     # POST /feedbacks.json
     def create
-      @feedback = Feedback.new(params[:feedback])
+      unless current_user.nil?
+        params[:feedback][:user_id] = current_user.id
+      end
+        
+      @feedback = MyFeedbackForm::Feedback.new(params[:feedback])
   
       respond_to do |format|
         if @feedback.save
-          format.html { redirect_to @feedback, notice: 'Feedback was successfully created.' }
+          format.html { redirect_to '/', notice: 'Feedback was successfully sent.' }
           format.json { render json: @feedback, status: :created, location: @feedback }
         else
           format.html { render action: "new" }

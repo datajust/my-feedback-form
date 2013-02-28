@@ -1,0 +1,8 @@
+Description:
+    Copy gem views to the Rails App
+
+Example:
+    rails generate my_feedback_form:views
+
+    This will create:
+        app/views/my_feedback_form/feedbacks/
