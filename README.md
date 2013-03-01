@@ -32,6 +32,11 @@ rake setup_feedback_type
 
 If you want to customise My Feedback Form views, you can copy over the views using the (Devise-inspired) generator
 
+
 ```ruby
 rails g my_feedback_form:views
 ```
+
+## User Authentication
+
+If you are using Devise to authenticate users, it will be saved automatically, otherwise you must extend feedbacks controller.

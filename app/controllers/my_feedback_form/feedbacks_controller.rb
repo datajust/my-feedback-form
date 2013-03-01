@@ -1,15 +1,10 @@
-
 module MyFeedbackForm
   class FeedbacksController < ApplicationController
     # GET /feedbacks/new
     # GET /feedbacks/new.json
     def new
       @feedback = MyFeedbackForm::Feedback.new
-  
-      respond_to do |format|
-        format.html # new.html.erb
-        format.json { render json: @feedback }
-      end
+      render "new", layout: false
     end
   
     # POST /feedbacks
