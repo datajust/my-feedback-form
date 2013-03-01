@@ -1,0 +1,6 @@
+$('#new_feedback').remove();
+<%- if @feedback.errors.any? %>
+	$('#my-feedback-form-modal .modal-body').html('<%= escape_javascript(render('form')) %>');
+<%- else %>
+  $('#my-feedback-form-modal').modal('hide');
+<%- end %>

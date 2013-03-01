@@ -1,0 +1,31 @@
+<%= form_for(@feedback, :remote => true, :html => {:class => 'form-horizontal'}) do |f| %>
+  <div class="control-group <%= @feedback.errors[:type].empty? ? '' : 'error' %>">
+    <%= f.label :type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select :type, MyFeedbackForm::FeedbackType.all, :id, :description, {:prompt => 'Type'} %>
+      <% @feedback.errors[:type].each do |msg| %>
+        <p class="help-inline"><%= msg %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="control-group <%= @feedback.errors[:title].empty? ? '' : 'error' %>">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title %>
+      <% @feedback.errors[:title].each do |msg| %>
+        <p class="help-inline"><%= msg %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="control-group <%= @feedback.errors[:message].empty? ? '' : 'error' %>">
+    <%= f.label :message, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :message, :size => "10x5" %>
+      <% @feedback.errors[:message].each do |msg| %>
+        <p class="help-inline"><%= msg %></p>
+      <% end %>
+    </div>
+  </div>
+<% end %>

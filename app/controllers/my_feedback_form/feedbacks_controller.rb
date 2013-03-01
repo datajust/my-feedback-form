@@ -18,11 +18,13 @@ module MyFeedbackForm
   
       respond_to do |format|
         if @feedback.save
-          format.html { redirect_to :nothing => true, :status => 201 }
+          format.html { redirect_to(@feedback) }
           format.json { render json: @feedback, status: :created, location: @feedback }
+          format.js
         else
-          format.html { render action: "new" }
+          format.html { render :action => "new" }
           format.json { render json: @feedback.errors, status: :unprocessable_entity }
+          format.js
         end
       end
     end
