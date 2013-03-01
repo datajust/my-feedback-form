@@ -1,4 +1,4 @@
-# MyFeedbackForm v 0.0.2
+# MyFeedbackForm v 0.0.3
 
 The gem does not have a server side interface, it has only the client side, unfortunatly you need to implement a way to see the feedbacks you received
 
@@ -63,6 +63,6 @@ rails g my_feedback_form:views
 If you are using Devise to authenticate users, it will be saved automatically, otherwise you must extend feedbacks controller.
 
 #Next Steps
-The next steps for this gem will be add validations to the feedback modell and create a task to easier install.
+The next steps for this gem will be create a task to easier install.
 
 
