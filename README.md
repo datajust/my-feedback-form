@@ -1,5 +1,7 @@
 # MyFeedbackForm v 0.0.2
 
+The gem does not have a server side interface, it has only the client side, unfortunatly you need to implement a way to see the feedbacks you received
+
 # Installation
 
 ## Specify Gem dependencies
