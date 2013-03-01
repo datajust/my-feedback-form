@@ -18,7 +18,7 @@ module MyFeedbackForm
   
       respond_to do |format|
         if @feedback.save
-          format.html { redirect_to '/', notice: 'Feedback was successfully sent.' }
+          format.html { redirect_to :nothing => true, :status => 201 }
           format.json { render json: @feedback, status: :created, location: @feedback }
         else
           format.html { render action: "new" }
