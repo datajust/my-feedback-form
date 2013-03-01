@@ -19,14 +19,14 @@ mount MyFeedbackForm::Engine => "/my_feedback_form"
 
 Add in the head of your rails app layout the link to gem javascript and stylesheets.
 
-```ruby
+```erb
 <%= stylesheet_link_tag    "my_feedback_form/application", :media => "all" %>
 <%= javascript_include_tag "my_feedback_form/application" %>
 ```
 
 Also add in your layout the feedback modal. You may want to add a condition to insert this modal on your page. If you use devise you can use the same condition.
 
-```ruby
+```erb
 <% if user_signed_in? %>
   <%= render 'my_feedback_form/feedbacks/new' %>
 <% end %>
