@@ -3,7 +3,7 @@ $('document').ready(function() {
   	$('#new_feedback').remove();
 	});
 
-	$("#feedback-button").live('click', function (e){
+	$("#feedback-button").bind('click', function (e){
 		e.preventDefault
 		form = $('#new_feedback');
 		$.get('/my_feedback_form/feedbacks/new', function(s) {
@@ -12,7 +12,7 @@ $('document').ready(function() {
 		});
 	});
 
-	$('#send-feedback').live('click', function (e) {
+	$('#send-feedback').bind('click', function (e) {
   	$('#new_feedback').submit();
   });
 });

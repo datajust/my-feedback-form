@@ -30,7 +30,7 @@ Also add in your layout the feedback modal. You may want to add a condition to i
 
 ```erb
 <% if user_signed_in? %>
-  <%= render 'my_feedback_form/feedbacks/new' %>
+  <%= render 'my_feedback_form/feedbacks/modal' %>
 <% end %>
 ```
 
