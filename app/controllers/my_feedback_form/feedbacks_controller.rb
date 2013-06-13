@@ -10,7 +10,8 @@ module MyFeedbackForm
     # POST /feedbacks
     # POST /feedbacks.json
     def create
-      unless current_user.nil?
+      current_user = current_user || nil
+      unless current_user == nil
         params[:feedback][:user_id] = current_user.id
       end
         
