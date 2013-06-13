@@ -46,8 +46,6 @@ Setup the app database.
 rake railties:install:migrations
 
 rake db:migrate
-
-rake setup_feedback_type
 ```
 
 ## View Customisation
