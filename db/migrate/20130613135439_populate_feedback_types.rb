@@ -1,3 +1,4 @@
+# encoding: utf-8
 class PopulateFeedbackTypes < ActiveRecord::Migration
   def change
   	MyFeedbackForm::FeedbackType.create :description => "Bug"
