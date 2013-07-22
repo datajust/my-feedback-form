@@ -19,7 +19,7 @@ Mount the routes in the rails app routes.rb file.
 mount MyFeedbackForm::Engine => "/my_feedback_form"
 ```
 
-Add in the head of your rails app layout the link to gem javascript and stylesheets.
+In the head of your rails app layout, after importing the application javascript and stylesheet add the link to gem javascript and stylesheet.
 
 ```erb
 <%= stylesheet_link_tag    "my_feedback_form/application", :media => "all" %>
