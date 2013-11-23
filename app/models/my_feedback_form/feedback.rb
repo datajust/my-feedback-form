@@ -2,12 +2,13 @@ module MyFeedbackForm
   class Feedback
       include Mongoid::Document
 
-      field :user_id, String
-      field :kind, String
-      field :message, String
-      field :email, String
-    attr_accessible :message, :kind, :user_id
+      field :user_id, type: String
+      field :kind, type: String
+      field :message, type: String
+      field :email, type: String
+      field :url, type: String
+      field :user_agent, type: String
+    # attr_accessible :message, :kind, :user_id, :email, :user_agent, :url
 
-    validates_presence_of :email, :message, :kind, :on => :create
   end
 end
