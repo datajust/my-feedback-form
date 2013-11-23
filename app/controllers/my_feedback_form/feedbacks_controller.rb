@@ -6,7 +6,7 @@ module MyFeedbackForm
       @feedback = MyFeedbackForm::Feedback.new
       render "new", layout: false
     end
-  
+
     # POST /feedbacks
     # POST /feedbacks.json
     def create
@@ -14,9 +14,9 @@ module MyFeedbackForm
       unless current_user == nil
         params[:feedback][:user_id] = current_user.id
       end
-        
+
       @feedback = MyFeedbackForm::Feedback.new(params[:feedback])
-  
+
       respond_to do |format|
         if @feedback.save
           format.html { redirect_to(@feedback) }

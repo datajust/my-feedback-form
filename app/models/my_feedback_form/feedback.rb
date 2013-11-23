@@ -1,7 +1,13 @@
 module MyFeedbackForm
-  class Feedback < ActiveRecord::Base
-    attr_accessible :message, :title, :type, :user_id
+  class Feedback
+      include Mongoid::Document
 
-    validates_presence_of :message, :title, :type, :on => :create
+      field :user_id, String
+      field :kind, String
+      field :message, String
+      field :email, String
+    attr_accessible :message, :kind, :user_id
+
+    validates_presence_of :email, :message, :kind, :on => :create
   end
 end

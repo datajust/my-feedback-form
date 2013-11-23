@@ -2,22 +2,25 @@
   <div class="control-group <%= @feedback.errors[:type].empty? ? '' : 'error' %>">
     <%= f.label :type, :class => 'control-label' %>
     <div class="controls">
-      <%= f.collection_select :type, MyFeedbackForm::FeedbackType.all, :id, :description, {:prompt => 'Type'} %>
+      <%= f.select_tag(:city_id, options_for_select([['bug','bug'],['suggestion','suggestion']]))
       <% @feedback.errors[:type].each do |msg| %>
         <p class="help-inline"><%= msg %></p>
       <% end %>
     </div>
   </div>
 
-  <div class="control-group <%= @feedback.errors[:title].empty? ? '' : 'error' %>">
-    <%= f.label :title, :class => 'control-label' %>
+  <div class="control-group <%= @feedback.errors[:email].empty? ? '' : 'error' %>">
+    <%= f.label :email, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :title %>
-      <% @feedback.errors[:title].each do |msg| %>
+      <%= f.text_field :email %>
+      <% @feedback.errors[:email].each do |msg| %>
         <p class="help-inline"><%= msg %></p>
       <% end %>
     </div>
   </div>
+
+    <%= f.hidden :url, : :value => 'http://somesite.com' %>
+    <%= f.hidden :url, : :value => "#{request.env['HTTP_USER_AGENT']}" %>
 
   <div class="control-group <%= @feedback.errors[:message].empty? ? '' : 'error' %>">
     <%= f.label :message, :class => 'control-label' %>
