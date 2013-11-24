@@ -1,6 +1,7 @@
 module MyFeedbackForm
   class Feedback
       include Mongoid::Document
+      include Mongoid::Timestamps
 
       field :user_id, type: String
       field :kind, type: String
