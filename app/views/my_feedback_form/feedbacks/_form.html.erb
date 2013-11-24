@@ -2,7 +2,7 @@
   <div class="control-group <%= @feedback.errors[:kind].empty? ? '' : 'error' %>">
     <%= f.label :kind, :class => 'control-label' %>
     <div class="controls">
-      <%= select_tag(:kind, options_for_select([['bug','bug'],['suggestion','suggestion']])) %>
+      <%= select_tag('feedback[kind]', options_for_select([['bug','bug'],['suggestion','suggestion']])) %>
       <% @feedback.errors[:kind].each do |msg| %>
         <p class="help-inline"><%= msg %></p>
       <% end %>
@@ -19,8 +19,8 @@
     </div>
   </div>
 
-    <%= hidden_field_tag :url,  "#{request.env['HTTP_REFERER']}"%>
-    <%= hidden_field_tag :user_agent,  "#{request.env['HTTP_USER_AGENT']}" %>
+    <%= hidden_field_tag 'feedback[url]',  "#{request.env['HTTP_REFERER']}"%>
+    <%= hidden_field_tag 'feedback[user_agent]',  "#{request.env['HTTP_USER_AGENT']}" %>
 
   <div class="control-group <%= @feedback.errors[:message].empty? ? '' : 'error' %>">
     <%= f.label :message, :class => 'control-label' %>
