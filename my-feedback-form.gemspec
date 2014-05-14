@@ -7,7 +7,7 @@ require "my-feedback-form/version"
 Gem::Specification.new do |s|
   s.name        = "my-feedback-form"
   s.version     = MyFeedbackForm::VERSION
-  s.authors     = ["Guilherme Gonçalves"]
+  s.authors     = ["Guilherme Goncalves"]
   s.email       = ["guilherme@webgoal.com.br"]
   s.homepage    = "https://github.com/guigonc/my-feedback-form"
   s.summary     = "Rails gem to provide feedback form for Rails 3 apps."
