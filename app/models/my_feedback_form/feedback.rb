@@ -1,6 +1,6 @@
 module MyFeedbackForm
   class Feedback
-      include Mongoid::Document
+#      include Mongoid::Document
 
       field :user_id, String
       field :kind, String
