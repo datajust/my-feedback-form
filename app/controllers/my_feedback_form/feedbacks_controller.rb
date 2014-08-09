@@ -10,7 +10,7 @@ module MyFeedbackForm
     # POST /feedbacks
     # POST /feedbacks.json
     def create
-      current_user = current_user || nil
+      current_user ||= nil
       unless current_user == nil
         params[:feedback][:user_id] = current_user.id
       end
@@ -30,5 +30,9 @@ module MyFeedbackForm
       end
     end
 
+    private
+    def feedback_parameters
+      params.require(:feedback).permit(:message, :kind, :user_id)
+    end
   end
 end

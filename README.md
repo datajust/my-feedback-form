@@ -7,7 +7,7 @@ The gem does not have a server side interface, it has only the client side, unfo
 ## Specify Gem dependencies
 
 ```ruby
-gem 'my-feedback-form'
+gem 'my-feedback-form', github: 'datajust/my-feedback-form'
 ```
 
 Then run bundle

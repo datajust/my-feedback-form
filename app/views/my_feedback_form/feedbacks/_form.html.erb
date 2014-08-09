@@ -2,7 +2,7 @@
   <div class="control-group <%= @feedback.errors[:type].empty? ? '' : 'error' %>">
     <%= f.label :type, :class => 'control-label' %>
     <div class="controls">
-      <%= f.select_tag(:city_id, options_for_select([['bug','bug'],['suggestion','suggestion']]))
+      <%= f.select_tag(:city_id, options_for_select([['bug','bug'],['suggestion','suggestion']]))%>
       <% @feedback.errors[:type].each do |msg| %>
         <p class="help-inline"><%= msg %></p>
       <% end %>
@@ -19,8 +19,8 @@
     </div>
   </div>
 
-    <%= f.hidden :url, : :value => 'http://somesite.com' %>
-    <%= f.hidden :url, : :value => "#{request.env['HTTP_USER_AGENT']}" %>
+    <%= f.hidden :url, :value => 'http://somesite.com' %>
+    <%= f.hidden :url, :value => "#{request.env['HTTP_USER_AGENT']}" %>
 
   <div class="control-group <%= @feedback.errors[:message].empty? ? '' : 'error' %>">
     <%= f.label :message, :class => 'control-label' %>
