@@ -1,3 +1,4 @@
+include ActiveModel::Validations
 module MyFeedbackForm
   class Feedback
 #      include Mongoid::Document
